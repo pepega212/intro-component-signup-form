@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(/images/bg-intro-desktop.png);
+    font-family: Poppins;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.container1 {
+    color: white;
+    width: 33rem;
+    margin-right: 3rem;
+    padding: 11.6rem 0rem 2rem 0rem;
+}
+
+.container1 h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 3.4rem;
+}
+
+.container1 p {
+    line-height: 1.5rem;
+}
+
+.container2 {
+    width: 35rem;
+}
+
+.trial {
+    display: flex;
+    color: white;
+    background-color: hsl(248, 32%, 49%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.65rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 0px rgba(0, 0, 8, 0.192);
+}
+
+form {
+    display: block;
+    background-color: white;
+    padding: 1.7rem 3rem 3rem 3rem; 
+    border-radius: 0.65rem;
+    box-shadow: 0px 8px 0px rgba(0, 0, 8, 0.192);
+}
+
+input {
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 1.3rem;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid hsla(283, 3%, 43%, 0.281);
+    border-radius: 0.3rem;
+}
+
+input:focus {
+    outline: 1px solid hsl(249, 99%, 64%);
+    caret-color: hsl(249, 99%, 64%);
+}
+
+input.invalid {
+    border-color: var(--clr-red) !important;
+    border-width: 2px !important;
+}
+
+.error {
+    border: 2px solid red;
+    background: url(/images/icon-error.svg) no-repeat;
+    background-position: 95% 50%;
+}
+
+span {
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: -15px;
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+}
+
+.success {
+    border: 2px solid hsl(154, 59%, 51%);
+}
+
+.btn {
+    width: 100%;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    height: 3.8rem;
+    border-radius: 0.3rem;
+    transition: .4s;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+    box-shadow: inset 0px -3px 0px rgba(0, 88, 50, 0.329);
+}
+
+.btn:hover {
+    background-color: hsl(152, 100%, 70%);
+    cursor: pointer;
+}
+
+form p {
+    color: hsla(246, 25%, 77%, 0.808);
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+form a {
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 1260px) {
+    .container1 {
+        margin-right: 1rem;
+        width: 30rem;
+    }
+    .container2 {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 960px) {
+    main {
+        flex-direction: column;
+    }
+    .container1 {
+        margin-right: 0;
+    }
+    .container2 {
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width: 486px) {
+    body {
+        background-image: url(/images/bg-intro-mobile.png);
+    }
+    .container1 {
+        width: 22rem;
+        height: 25rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .container1 h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .container2 {
+        width: 22rem;
+    }
+    .trial {
+        height: 6rem;
+        padding: 0 4rem 0 4rem;
+    }
+    form {
+        padding: 1.5rem;
+    }
+    form p {
+        padding: 0 1.4rem 0 1.4rem;
+    }
+}
